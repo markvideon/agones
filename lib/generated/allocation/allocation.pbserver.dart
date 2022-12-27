@@ -16,20 +16,25 @@ import 'allocation.pbjson.dart';
 export 'allocation.pb.dart';
 
 abstract class AllocationServerServiceBase extends $pb.GeneratedService {
-  $async.Future<$0.AllocationResponse> allocate($pb.ServerContext ctx, $0.AllocationRequest request);
+  $async.Future<$0.AllocationResponse> allocate(
+      $pb.ServerContext ctx, $0.AllocationRequest request);
 
   $pb.GeneratedMessage createRequest($core.String method) {
     switch (method) {
-      case 'Allocate': return $0.AllocationRequest();
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'Allocate':
+        return $0.AllocationRequest();
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx, $core.String method, $pb.GeneratedMessage request) {
+  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx,
+      $core.String method, $pb.GeneratedMessage request) {
     switch (method) {
-      case 'Allocate': return this.allocate(ctx, request as $0.AllocationRequest);
-      default: throw $core.ArgumentError('Unknown method: $method');
+      case 'Allocate':
+        return this.allocate(ctx, request as $0.AllocationRequest);
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 }
-

@@ -10,32 +10,59 @@ import 'dart:core' as $core;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class AllocationRequest_SchedulingStrategy extends $pb.ProtobufEnum {
-  static const AllocationRequest_SchedulingStrategy Packed = AllocationRequest_SchedulingStrategy._(0, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'Packed');
-  static const AllocationRequest_SchedulingStrategy Distributed = AllocationRequest_SchedulingStrategy._(1, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'Distributed');
+  static const AllocationRequest_SchedulingStrategy Packed =
+      AllocationRequest_SchedulingStrategy._(
+          0,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'Packed');
+  static const AllocationRequest_SchedulingStrategy Distributed =
+      AllocationRequest_SchedulingStrategy._(
+          1,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'Distributed');
 
-  static const $core.List<AllocationRequest_SchedulingStrategy> values = <AllocationRequest_SchedulingStrategy> [
+  static const $core.List<AllocationRequest_SchedulingStrategy> values =
+      <AllocationRequest_SchedulingStrategy>[
     Packed,
     Distributed,
   ];
 
-  static final $core.Map<$core.int, AllocationRequest_SchedulingStrategy> _byValue = $pb.ProtobufEnum.initByValue(values);
-  static AllocationRequest_SchedulingStrategy? valueOf($core.int value) => _byValue[value];
+  static final $core.Map<$core.int, AllocationRequest_SchedulingStrategy>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static AllocationRequest_SchedulingStrategy? valueOf($core.int value) =>
+      _byValue[value];
 
-  const AllocationRequest_SchedulingStrategy._($core.int v, $core.String n) : super(v, n);
+  const AllocationRequest_SchedulingStrategy._($core.int v, $core.String n)
+      : super(v, n);
 }
 
 class GameServerSelector_GameServerState extends $pb.ProtobufEnum {
-  static const GameServerSelector_GameServerState READY = GameServerSelector_GameServerState._(0, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'READY');
-  static const GameServerSelector_GameServerState ALLOCATED = GameServerSelector_GameServerState._(1, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'ALLOCATED');
+  static const GameServerSelector_GameServerState READY =
+      GameServerSelector_GameServerState._(
+          0,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'READY');
+  static const GameServerSelector_GameServerState ALLOCATED =
+      GameServerSelector_GameServerState._(
+          1,
+          const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+              ? ''
+              : 'ALLOCATED');
 
-  static const $core.List<GameServerSelector_GameServerState> values = <GameServerSelector_GameServerState> [
+  static const $core.List<GameServerSelector_GameServerState> values =
+      <GameServerSelector_GameServerState>[
     READY,
     ALLOCATED,
   ];
 
-  static final $core.Map<$core.int, GameServerSelector_GameServerState> _byValue = $pb.ProtobufEnum.initByValue(values);
-  static GameServerSelector_GameServerState? valueOf($core.int value) => _byValue[value];
+  static final $core.Map<$core.int, GameServerSelector_GameServerState>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static GameServerSelector_GameServerState? valueOf($core.int value) =>
+      _byValue[value];
 
-  const GameServerSelector_GameServerState._($core.int v, $core.String n) : super(v, n);
+  const GameServerSelector_GameServerState._($core.int v, $core.String n)
+      : super(v, n);
 }
-

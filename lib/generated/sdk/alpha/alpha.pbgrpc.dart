@@ -22,14 +22,16 @@ class AlphaSDKClient extends $grpc.Client {
       '/agones.dev.sdk.alpha.SDK/PlayerDisconnect',
       ($1.PlayerID value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $1.Bool.fromBuffer(value));
-  static final _$setPlayerCapacity = $grpc.ClientMethod<$1.Count, $1.AlphaEmpty>(
-      '/agones.dev.sdk.alpha.SDK/SetPlayerCapacity',
-      ($1.Count value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $1.AlphaEmpty.fromBuffer(value));
-  static final _$getPlayerCapacity = $grpc.ClientMethod<$1.AlphaEmpty, $1.Count>(
-      '/agones.dev.sdk.alpha.SDK/GetPlayerCapacity',
-      ($1.AlphaEmpty value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $1.Count.fromBuffer(value));
+  static final _$setPlayerCapacity =
+      $grpc.ClientMethod<$1.Count, $1.AlphaEmpty>(
+          '/agones.dev.sdk.alpha.SDK/SetPlayerCapacity',
+          ($1.Count value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $1.AlphaEmpty.fromBuffer(value));
+  static final _$getPlayerCapacity =
+      $grpc.ClientMethod<$1.AlphaEmpty, $1.Count>(
+          '/agones.dev.sdk.alpha.SDK/GetPlayerCapacity',
+          ($1.AlphaEmpty value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $1.Count.fromBuffer(value));
   static final _$getPlayerCount = $grpc.ClientMethod<$1.AlphaEmpty, $1.Count>(
       '/agones.dev.sdk.alpha.SDK/GetPlayerCount',
       ($1.AlphaEmpty value) => value.writeToBuffer(),
@@ -79,7 +81,8 @@ class AlphaSDKClient extends $grpc.Client {
     return $createUnaryCall(_$isPlayerConnected, request, options: options);
   }
 
-  $grpc.ResponseFuture<$1.PlayerIDList> getConnectedPlayers($1.AlphaEmpty request,
+  $grpc.ResponseFuture<$1.PlayerIDList> getConnectedPlayers(
+      $1.AlphaEmpty request,
       {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$getConnectedPlayers, request, options: options);
   }

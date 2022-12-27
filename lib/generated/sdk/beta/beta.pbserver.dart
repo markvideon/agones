@@ -15,17 +15,18 @@ import 'beta.pbjson.dart';
 export 'beta.pb.dart';
 
 abstract class BetaSDKServerServiceBase extends $pb.GeneratedService {
-
   $pb.GeneratedMessage createRequest($core.String method) {
     switch (method) {
-      default: throw $core.ArgumentError('Unknown method: $method');
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 
-  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx, $core.String method, $pb.GeneratedMessage request) {
+  $async.Future<$pb.GeneratedMessage> handleCall($pb.ServerContext ctx,
+      $core.String method, $pb.GeneratedMessage request) {
     switch (method) {
-      default: throw $core.ArgumentError('Unknown method: $method');
+      default:
+        throw $core.ArgumentError('Unknown method: $method');
     }
   }
 }
-

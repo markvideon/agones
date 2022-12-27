@@ -13,12 +13,10 @@ void main(List<String> arguments) async {
 
   print('Connecting to localhost on Port: $port.');
 
-  final sdkClient = SDKClient(
-    ClientChannel(
-      'localhost', port: port,
+  final sdkClient = SDKClient(ClientChannel('localhost',
+      port: port,
       // You should not use the insecure mode in a production environment.
-      options: ChannelOptions(credentials: ChannelCredentials.insecure()))
-  );
+      options: ChannelOptions(credentials: ChannelCredentials.insecure())));
 
   // Hang & log responses to stdout.
   await for (final value in sdkClient.watchGameServer(Empty())) {
@@ -30,9 +28,9 @@ void main(List<String> arguments) async {
 
 const pattern = '--port=';
 int? parseArguments(List<String> arguments) {
-  final match = arguments.firstWhereOrNull((element) => element.startsWith(pattern));
+  final match =
+      arguments.firstWhereOrNull((element) => element.startsWith(pattern));
   if (match == null) return null;
 
-  return int.tryParse(
-    match.split(pattern).last);
+  return int.tryParse(match.split(pattern).last);
 }

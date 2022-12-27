@@ -1,3 +1,3 @@
-## 1.0.0
+## 1.28.0
 
-- Initial version.
+- Initial version, generated from Agones SDK v1.28.0.
